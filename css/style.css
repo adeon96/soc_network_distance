@@ -1,0 +1,849 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dropdown_list {
+  display: flex;
+  align-items: center;
+}
+
+.triangle {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid #BFBFBF;
+
+  margin-right: 15px;
+}
+
+/*Header*/
+
+.header {
+  background-color: #0050B3;
+  padding: 8px 0px;
+
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__search {
+  display: flex;
+  justify-content: space-between;
+
+  flex-basis: 336px;
+  flex-grow: 0;
+  flex-shrink: 1;
+
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  background-color: #fff;
+
+  padding: 5px 12px;
+}
+
+.search__input,  .search__input::placeholder{
+  font-size: 14px;
+  color: #BFBFBF;
+}
+
+.search__input {
+  flex-grow: 1;
+}
+
+.search__button {
+  background: transparent;
+  margin-left: 5px;
+}
+
+.header__navigation {
+  display: flex;
+  flex-basis: 410px;
+}
+
+.header__navigation a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header__navigation div {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  padding-right: 13px;
+}
+
+.user_avatar {
+  flex-basis: 32px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  margin-right: 8px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user_avatar img {
+  max-width: 100%;
+  display: block;
+}
+
+.navigation__panel a {
+  border-right: 1px solid #003A8C;
+  padding: 2px 13px;
+}
+
+.navigation__panel a:first-child {
+  border-left: 1px solid #003A8C;
+}
+
+.nav_icon {
+  margin-left: 17px;
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.notification {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  background-color: #F5222D;
+  border: 1px solid #FFFFFF;
+
+  top: -8px;
+  right: -10px;
+}
+
+.notification span {
+  margin: 0px auto;
+  font-size: 10px;
+}
+
+.nav_icon:last-child::before {
+  content: '';
+  width: 1px;
+  height: 16px;
+  background-color: #003A8C;
+  margin-right: 12px;
+}
+
+.icon_svg {
+  fill: #002766;
+}
+
+.icon_svg:hover {
+  fill: #fff;
+}
+
+/* Main content */
+.main_content {
+  background-color: #f5f5f5;
+  padding-top: 50px;
+}
+
+.content_items {
+  display: flex;
+  padding-top: 14px;
+}
+
+.left_sidebar_items {
+  position: sticky;
+  top: 64px;
+}
+
+/* Left sidebar */
+.left_sidebar {
+  flex-basis: 192px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.left_sidebar a {
+  color: #595959;
+  font-size: 14px;
+}
+
+.left_sidebar_user {
+  display: flex;
+  align-items: center;
+  padding: 0px 9px;
+}
+
+.left_user_avatar {
+  flex-basis: 24px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  margin-right: 8px;
+}
+
+.left_user_name {
+  color: #262626;
+  font-size: 14px;
+}
+
+.left_user_avatar img {
+  max-width: 100%;
+}
+
+.top_navbar {
+  margin-top: 12px;
+}
+
+.top_navbar_item {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.top_navbar_item:hover {
+  background-color: #fff;
+}
+
+.top_navbar_item a {
+  margin-left: 8px;
+  flex-grow: 1;
+}
+
+.top_navbar_item a:hover {
+  color: #262626;
+  font-weight: bold;
+}
+
+.top_navbar_item a:hover::after {
+  content: '...';
+}
+
+/*Shortcuts*/
+.shortcuts {
+  margin-top: 25px;
+  padding: 4px 8px;
+}
+
+.shortcuts_title {
+  color: #262626;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.shortcuts_items {
+  margin-top: 15px;
+}
+
+.shortcuts_items li {
+  display: flex;
+  align-items: center;
+  margin: 7px 0px;
+}
+
+.shortcuts_items li:hover {
+  background-color: #fff;
+}
+
+.shortcuts_items li a {
+  padding-left: 8px;
+}
+
+.shortcuts_items li a:hover {
+  color: #262626;
+  font-weight: bold;
+}
+
+.shortcuts_items li::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../img/trophy_icon.svg');
+}
+
+/*Explore*/
+.explore {
+  margin-top: 25px;
+  padding: 4px 8px;
+}
+
+.explore_title {
+  color: #262626;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.explore_items {
+  margin-top: 15px;
+}
+
+.explore_items li {
+  display: flex;
+  align-items: center;
+  margin: 7px 0px;
+}
+
+.explore_items li:nth-child(1)::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../img/flag_icon.svg');
+}
+
+.explore_items li:nth-child(2)::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../img/headphones_icon.svg');
+}
+
+.explore_items li:nth-child(3)::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../img/home_icon.svg');
+}
+
+.explore_items li:nth-child(4)::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../img/rocket_icon.svg');
+}
+
+.explore_dropdown_list {
+  margin-top: 20px;
+  margin-left: 7px;
+}
+
+.explore_dropdown_list a {
+  color: #1890FF;
+}
+
+.explore_items li:hover {
+  background-color: #fff;
+}
+
+.explore_items li a {
+  padding-left: 8px;
+}
+
+.explore_items li a:hover {
+  color: #262626;
+  font-weight: bold;
+}
+
+/* Center content */
+.center_content {
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.create_post {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #fff;
+
+  position: sticky;
+  top: 48px;
+
+  /*position: fixed;
+  top: auto;
+  left: auto;
+  z-index: 1;
+
+  width: 585px;*/
+}
+
+.create_post__header {
+  background: #F5F5F5;
+  border-bottom: 1px solid #D9D9D9;
+
+  padding: 9px 16px;
+}
+
+.create_post__header h3 {
+  color: #595959;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.input_user {
+  display: flex;
+  align-items: center;
+
+  padding: 16px;
+  padding-bottom: 24px;
+}
+
+.input_user_avatar {
+  flex-basis: 40px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  align-self: start;
+}
+
+.input_user_avatar img {
+  width: 100%;
+}
+
+.input_user_textarea {
+  flex-grow: 1;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8C8C8C;
+
+  margin-left: 16px;
+  word-wrap: break-word;
+
+  max-width: 500px;
+  max-height: 200px;
+
+  overflow: auto;
+}
+
+.footer_buttons {
+  display: flex;
+  align-items: center;
+
+  padding: 16px 0px;
+  margin: 0px 16px;
+  border-top: 1px solid #E8E8E8;
+}
+
+.footer_button_item {
+  background-color: #F5F5F5;
+  border-radius: 48px;
+  padding: 9px 12px;
+  margin: 0px 4px;
+
+  display: flex;
+  align-items: center;
+}
+
+.footer_button_item a {
+  color: #595959;
+  font-size: 14px;
+  font-weight: bold;
+
+  margin-left: 5px;
+}
+
+.footer_button_item:last-child a {
+  margin-left: 0;
+}
+
+
+/*Post item*/
+.post_item {
+  padding: 16px;
+  margin: 16px 0px;
+  /*max-width: 556px;*/
+
+  background-color: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.post_item_header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.post_item_user {
+  display: flex;
+  align-items: center;
+
+  max-width: 200px;
+}
+
+.post_item_user_avatar {
+  flex-basis: 48px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  margin-right: 12px;
+}
+
+.post_item_user_avatar img {
+  max-width: 100%;
+}
+
+.post_item_user_info h4 {
+  color: #0050B3;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.post_item_user_info span {
+  color: #8C8C8C;
+  font-size: 14px;
+}
+
+.circle {
+  background-color: #BFBFBF;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin: 2px 6px;
+}
+
+.post_item_text {
+  color: #595959;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.post_item_img {
+  margin-top: 16px;
+}
+
+.post_item_img img {
+  max-width: 100%;
+}
+
+.likes_count_btn {
+  background: transparent;
+  margin-top: 9px;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.likes_count_btn span {
+  color: #595959;
+  font-size: 14px;
+  line-height: 22px;
+  margin-left: 4px;
+}
+
+.btn_svg, .likes_btn_svg {
+  fill: #595959;
+}
+
+.btn_svg:hover, .likes_btn_svg:hover {
+  fill: #1890FF;
+}
+
+.post_item_footer {
+  display: flex;
+  justify-content: space-around;
+
+  min-height: 40px;
+  margin-top: 9px;
+
+  border-top: 1px solid #E8E8E8;
+}
+
+.post_item_footer button {
+  background: transparent;
+  display: flex;
+  align-items: center;
+
+  margin-top: 16px;
+}
+
+.post_item_footer button span {
+  margin-left: 8px;
+  color: #595959;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* Right sidebar */
+.right_sidebar_items {
+  position: sticky;
+  top: 64px
+}
+
+.right_sidebar {
+  flex-basis: 384px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/*Stories*/
+.stories {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 16px 24px;
+}
+
+.stories_header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.stories_header_title {
+  color: #262626;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.stories_header_links {
+  align-items: center;
+  color: #0050B3;
+}
+
+.stories_item {
+  display: flex;
+  margin: 8px 0px;
+}
+
+.stories_item:first-child .stories_item_img {
+  border: 1px solid #D9D9D9;
+}
+
+.stories_item_img {
+  background: #F5F5F5;
+
+  flex-basis: 48px;
+  height: 48px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 3px solid #1890FF;
+}
+
+.plus_btn {
+  display: block;
+  width: 100%;
+  margin: 0px auto;
+  margin-top: 11px;
+
+  background-color: transparent;
+}
+
+.stories_item_img span {
+  font-weight: 600;
+  font-size: 20px;
+  color: #1890FF;
+
+  margin: 0px auto;
+}
+
+.stories_item_img img {
+  max-width: 100%;
+}
+
+.stories_item_desc {
+  margin-left: 12px;
+}
+
+.item_desc_link {
+  display: block;
+  color: #0050B3;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.item_desc_text {
+  color: #8C8C8C;
+  font-size: 14px;
+}
+
+.stories_dropdown_list {
+  margin-top: 16px;
+}
+
+.stories_dropdown_list a {
+  color: #0050B3;
+}
+
+.birthday {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 16px; 
+  margin-top: 16px;
+
+  display: flex;
+  align-items: center;
+}
+
+.birthday_text {
+  color: #0050B3;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+/*Fanpage*/
+.fanpage {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  padding: 9px 16px;
+  margin-top: 16px;
+}
+
+.fanpage_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #D9D9D9;
+  padding-bottom: 9px;
+}
+
+.fanpage_header_title {
+  font-size: 14px;
+  color: #595959;
+  font-weight: bold;
+}
+
+.fanpage_stats {
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.fanpage_stats_img {
+  flex-basis: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  overflow: hidden;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  border: 1px solid #D9D9D9;
+  margin-right: 12px;
+}
+
+.fanpage_stats_img img {
+  max-width: 100%;
+  display: block;
+}
+
+.fan_name {
+  color: #0050B3;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.stats_desc_links {
+  margin-top: 13px;
+}
+
+.stats_desc_link_item {
+  display: flex;
+  align-items: center;
+
+  margin: 10px 0px;
+}
+
+.stats_desc_link_item span {
+  font-size: 14px;
+  color: #8C8C8C;
+}
+
+.desc_link_item_svg {
+  fill: #262626;
+  margin-right: 7px;
+}
+
+.desc_link_item_svg:hover {
+  fill: #1890FF;
+}
+
+.notifications_count {
+  background: #F5F5F5;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  padding: 2px 4px;
+
+  margin-left: 5px;
+}
+
+.notifications_count span {
+  color: #595959;
+  font-size: 12px;
+}
+
+.fanpage_buttons {
+  display: flex;
+  margin-top: 16px;
+}
+
+.fanpage_button_item {
+  flex-basis: 33.3%;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  padding: 8px 16px;
+}
+
+.fanpage_button_item.active, .fanpage_button_item:hover {
+  border: 1px solid #1890FF;
+}
+
+.fanpage_button_item.active span {
+  color: #1890FF;
+}
+
+.fanpage_button_item button {
+  width: 100%;
+  background: transparent;
+  padding: 4px 0px;
+}
+
+.fanpage_button_item button span {
+  color: #595959;
+  font-size: 16px;
+}
+
+.button_info {
+  padding: 16px 0px;
+}
+
+.button_info p {
+  text-align: center;
+  margin: 8px 0px;
+}
+
+.button_info p:last-child {
+  margin-bottom: 0;
+} 
+
+.total_likes {
+  color: #262626;
+  font-size: 24px;
+}
+
+.week_likes {
+  color: #8C8C8C;
+  font-size: 14px;
+}
